@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="期末專案".html>
+      <title>期末專案</title>
+      <style>
+        body{    
+            font-family: Perpetua;
+            font-size: 1.5em;
+            text-align: center;
+       }
+       span{
+            font-size: 1.8em; 
+       }
+       input{
+            color: blue;
+            font-weight: 800;
+        }
+        .button{
+            color: navy;
+            font-size: 1.2em;
+        }
+        img{
+			width: 80px;
+			height: 45px;
+		}
+      </style>
+   </head>
+   <body>
+      <form method = "post" action = "https://ntouweb2021.herokuapp.com/">
+        <p>
+            <label><span>Y</span>our name:
+               <input placeholder = "王小寶" type = "name"  name="fullname"/>
+            </label>
+         </p> 
+        <p>
+            <label><span>Y</span>our phone:
+               <input type = "phone" placeholder = "0901234567" name="phone"
+                  required /> 
+            </label>
+         </p> 
+         <p>
+            <label><span>D</span>atetime local:
+               <input type = "datetime-local" /> 
+            </label>
+         </p>
+        <p>
+            <label><span>Y</span>our address:
+               <input type = "address" name="address"
+                  placeholder = "基隆市中正區北寧路2號" /> 
+            </label>
+         </p>
+        <p>        
+            <input class="button" type="button" id="button1" onclick = "location.href = 'intelligent.html'" value="智能點餐">
+            <input class="button" type="button" id="button2" onclick = "location.href = 'normal.html'" value="一般點餐">
+            <input class="button" type="reset"  id="button3" value="清除資料">
+            <a href="https://youxi0807.github.io/-/final/%E7%BE%8E%E9%A3%9F%E5%9C%B0%E5%9C%96-00957011+00957031.pptx"><img src = "img/ppt.png"></a>
+        </p>      
+      </form>
+   </body>
+</html>
+

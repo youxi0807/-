@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>智能點餐</title>
+		<style>
+		body{    
+			background-color: bisque;
+            font-family: Perpetua;
+            font-size: 1.5em;
+            text-align: center;
+       	}
+       	span{
+            font-size: 1.8em; 
+       	}
+       	input{
+            color: blue;
+            font-weight: 800;
+        }
+		</style>
+		<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="html/main.js"></script>
+		<script src="html/main1.js"></script>
+		<script src="html/main2.js"></script>
+		<script src="html/main3.js"></script>
+		<script src="html/main4.js"></script>
+		<script src="html/main5.js"></script>
+		<script src="html/main6.js"></script>
+		<script src="html/main7.js"></script>
+		<script src="html/main8.js"></script>
+		<script src="html/main9.js"></script>
+		<script src="html/main10.js"></script>
+		<script src="html/main11.js"></script>
+
+	</head>
+	<body>
+		<h1>智能點餐</h1>
+		<p><label><span>Y</span>our favorite: 
+			<input id="list" type="text" placeholder = " " list = "Your favorite" name="kind"/>
+			<datalist id = "Your favorite">
+				<option id="op1" value = "8號粥品"></option>
+				<option value = "山海屋鐵板燒"></option>
+				<option value = "閒聊x芋仔番薯"></option>
+				<option value = "日光冰品與剪髮"></option>
+				<option value = "Thanks Mr. 1989 Burger"></option>
+				<option value = "海大瑞麟美而美"></option>
+				<option value = "早點•來-海大店"></option>
+				<option value = "新豐街鹹水雞"></option>
+				<option value = "何家飯盒"></option>
+				<option value = "刈堡BAO"></option>
+				<option value = "熊豆咖啡店"></option>
+				<option value = "八方雲集鍋貼水餃專賣店(基隆中正店)"></option>
+			</datalist>
+		</label>
+	</p>
+	<p>
+		<strong><I>Hungry Feeling:</I></strong>
+		0 <input id = "typ" type = "range" 
+			  min = "0"
+			  max = "10"
+			  value = "5" /> 10
+	</p> 
+	<button id = "goback" href="期末專案.html" onClick="javascript :history.back(-1);">返回上一頁</button>
+	<button id = "random">智能選擇</button>
+		<p>您的飢餓指數為：</p><span id="hun"></span>
+		<p>您適合的餐點為：</p><span id="meal"></span>
+
+
+
+		<script>
+			//呼叫我喜好的菜單
+			// function start(){
+			// 	document.getElementById("random").addEventListener("click",rand,false);
+			// }
+			
+			//依照飢餓程度找到對應的等待時間餐點
+			$(document).ready(function(){
+				$("#random").click(rand);
+			});
+			
+			function rand(){
+				var h=$("#typ").val();
+				document.getElementById("hun").innerHTML=h;
+				if($("#list").val()=='山海屋鐵板燒'){
+					ShowMsgFromScript();
+				}
+				else if($("#list").val()=='8號粥品'){
+					ShowMsgFromScript1();
+				}
+				else if($("#list").val()=='何家飯盒'){
+					ShowMsgFromScript2();
+				}
+				else if($("#list").val()=='閒聊x芋仔番薯'){
+					ShowMsgFromScript3();
+				}
+				else if($("#list").val()=='海大瑞麟美而美'){
+					ShowMsgFromScript4();
+				}
+				else if($("#list").val()=='早點•來-海大店'){
+					ShowMsgFromScript5();
+				}
+				else if($("#list").val()=='新豐街鹹水雞'){
+					ShowMsgFromScript6();
+				}
+				else if($("#list").val()=='刈堡BAO'){
+					ShowMsgFromScript7();
+				}
+				else if($("#list").val()=='日光冰品與剪髮'){
+					ShowMsgFromScript8();
+				}
+				else if($("#list").val()=='熊豆咖啡店'){
+					ShowMsgFromScript9();
+				}
+				else if($("#list").val()=='Thanks Mr. 1989 Burger'){
+					ShowMsgFromScript10();
+				}
+				else if($("#list").val()=='八方雲集鍋貼水餃專賣店(基隆中正店)'){
+					ShowMsgFromScript11();
+				}
+			}
+			// window.addEventListener("load",start,false);
+			//最後隨機輸出菜色
+		</script>	
+	</body>
+</html>
